@@ -3,7 +3,7 @@ rev: latest
 aws_region: us-west-2
 replicas: 1
 settings:
-  auth: https://auth.mozilla.auth0.com/
+  auth: https://idp.iam.mozilla.com/
   avatar__retrieve_by_id_path: /avatar/get/id/
 resources:
   requests:
