@@ -34,8 +34,8 @@ impl fmt::Display for InternalFileName {
         write!(
             f,
             "{}_{}.{}",
-            &self.uuid_hash,
-            &self.display.as_str(),
+            self.uuid_hash,
+            self.display.as_str(),
             FILE_ENDING
         )
     }
@@ -94,8 +94,8 @@ impl ExternalFileName {
         base64::encode_config(
             format!(
                 "{}#{}#{}",
-                &self.internal.uuid_hash,
-                &self.internal.display.as_str(),
+                self.internal.uuid_hash,
+                self.internal.display.as_str(),
                 self.ts
             ),
             base64::URL_SAFE_NO_PAD,

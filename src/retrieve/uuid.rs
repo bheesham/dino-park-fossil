@@ -26,7 +26,7 @@ pub async fn get_uuid<T: AsyncCisClientTrait>(
             .get_user_by(user_id, &GetBy::UserId, None)
             .await?;
         if let Some(uuid) = p.uuid.value {
-            let msg = format!("updated cache for {}", &user_id_f);
+            let msg = format!("updated cache for {}", user_id_f);
             cache_f
                 .try_lock()
                 .ok()

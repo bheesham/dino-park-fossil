@@ -67,7 +67,7 @@ pub async fn change_display_level(
             "{}{}{}",
             settings.picture_api_url,
             settings.retrieve_by_id_path,
-            &file_name.filename()
+            file_name.filename()
         ),
     };
     if old_file_name.internal.uuid_hash != file_name.internal.uuid_hash {
@@ -114,7 +114,7 @@ async fn check_resize_store(
             "{}{}{}",
             settings.picture_api_url,
             settings.retrieve_by_id_path,
-            &file_name.filename()
+            file_name.filename()
         ),
     };
     if let Some(old_url) = old_url {
